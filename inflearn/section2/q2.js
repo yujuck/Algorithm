@@ -2,10 +2,10 @@
 
 function solution(arr) {
     let answer = 1;
-    let highest = Number.MIN_SAFE_INTEGER;
+    let highest = arr[0];
 
     for (let i = 1; i < arr.length; i++) {
-        if (arr[i - 1] < arr[i] && highest < arr[i]) {
+        if (highest < arr[i]) {
             answer++;
             highest = arr[i];
         }
